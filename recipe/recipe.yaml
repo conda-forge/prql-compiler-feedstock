@@ -1,0 +1,37 @@
+context:
+  version: 0.13.2
+
+package:
+  name: prql-compiler
+  version: ${{ version }}
+
+source:
+  url: https://github.com/prql/prql/tags/${{ version }}.tar.gz
+  sha256: ee6b683a674d64c4a12893a6c926127e98481767ccb385a0f563dcc862bd199a
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - cargo-bundle-licenses
+
+tests:
+  - script:
+      - prqlc --help
+
+about:
+  license: Apache-2.0
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  summary: Simple, powerful, pipelined SQL replacement
+  homepage: https://prql-lang.org
+  repository: https://github.com/prql/prql
+
+extra:
+  recipe-maintainers:
+    - danielnachun
