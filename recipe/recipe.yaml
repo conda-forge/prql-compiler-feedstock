@@ -1,5 +1,5 @@
 context:
-  version: "0.13.8"
+  version: "0.13.9"
 
 package:
   name: prql-compiler
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/prql/prql/archive/${{ version }}.tar.gz
-  sha256: 68fb0ee26239de7b63da3af60a63f01dee290b433e52a2805d28735700ad6b3d
+  sha256: a425c507dffc36d1e6a0d0fce1f7352dee47d818b90d3463e0d3f30963d86989
 
 build:
   number: 0
